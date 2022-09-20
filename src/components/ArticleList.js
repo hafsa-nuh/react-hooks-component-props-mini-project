@@ -8,6 +8,7 @@ function ArticleList({posts}) {
         title ={details.title}
         date={details.date}
         preview={details.preview}
+        minutes = {details.minutes}
         />
     ))
   return (

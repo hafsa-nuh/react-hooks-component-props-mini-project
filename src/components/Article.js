@@ -1,11 +1,12 @@
 import React from 'react'
 
 function Article({ title, date = "January 1, 1970", preview, minutes }) {
+    console.log(minutes)
     const bonus = minutesRead(minutes);
   return (
     <article>
       <h3>{title}</h3>
-      <small>{date}.{bonus} {minutes} min read</small>
+      <small>{date}.{bonus}{minutes} min read</small>
       <p>{preview}</p>
     </article>
   );
@@ -22,7 +23,9 @@ For every 10 minutes (rounded up to the nearest 10), display a bento box emoji. 
  */
 
 function minutesRead(minutes){
-    const time = minutes <30 ? 5 : 10
+    console.log(minutes)
+    const time = minutes <=30 ? 5 : 10
+    console.log(time)
     const emoji = minutes < 30 ? "☕️ " : "🍱";
 
     let emojis = ""
